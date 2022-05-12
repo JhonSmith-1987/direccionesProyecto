@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <h1>Agregar Direccion</h1>
+        <form method="POST">
+            {{forma.csrf_token}}
+            <p>
+                {{forma.nombre.label}} <br>
+                {{forma.nombre(size=30)}}
+            </p>
+            <p>
+                {{forma.direccion.label}} <br>
+                {{forma.direccion(size=30)}}
+            </p>
+            <p>
+                {{forma.enviar()}}
+            </p>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

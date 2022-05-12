@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row align-items-start">
+        <div class="col-12">
+            <div class="container">
+                <div class="row align-items-start">
+
+                    <div col-12>
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th scope="col">Id_direccion</th>
+                              <th scope="col">Nombre</th>
+                              <th scope="col">Direccion</th>
+                                <th scope="col"></th>
+                              <th scope="col"></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {% for direccion in direcciones %}
+                                <tr>
+                                  <th scope="row">{{direccion.id}}</th>
+                                  <td>{{direccion.nombre}}</td>
+                                  <td>{{direccion.direccion}}</td>
+                                     <td><a class="ver" href="ver/{{direccion.id}}">Ver</a></td>
+                                  <td><a class="verde" href="editar/{{direccion.id}}">Editar</a><a class="rojo" href="eliminar/{{direccion.id}}">Eliminar</a></td>
+                                </tr>
+                            {% endfor %}
+                          </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

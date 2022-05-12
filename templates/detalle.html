@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="container" style="width: 70%; padding: 100px;">
+        <div class="card-header">
+            <h3>Ver Direccion</h3>
+        </div>
+        <ul class="list-group list-group-flush">
+          <p class="list-group-item">Id direcion: {{direccion.id}}</p>
+          <p class="list-group-item">Nombre: {{direccion.nombre}}</p>
+          <p class="list-group-item">Direccion: {{direccion.direccion}}</p>
+        </ul>
+    </div>
+</div>
+
+{% endblock %}
