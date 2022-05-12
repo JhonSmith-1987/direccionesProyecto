@@ -63,11 +63,11 @@ def agregar():
 @app.route('/buscar', methods=['GET', 'POST'])
 def buscar():
     nuevo = request.form['nuevo']
-    app.logger.debug("Se detecto el nombre => {}".format(nuevo))
-    datosNombre = models.Direccion.filter_by(nombre=nuevo).all()
-    datosDireccion = models.Direccion.filter_by(direccion=nuevo).all()
-    app.logger.debug(f'los datos filtrados por nombre son: {datosNombre}')
-    app.logger.debug(f'los datos filtrados por direccion son: {datosDireccion}')
+    search = "%{}%".format(nuevo)
+    direcciones = models.Direccion.query.filter(models.Direccion.nombre.like(search)).all()
+    for direccion in direcciones:
+        app.logger.debug(f'Se econtro esta coincidencia {direccion}')
+    app.logger.debug(f'los datos filtrados por direccion son: {direcciones}')
     return render_template('nueva_direccion.html')
 
 
