@@ -1,24 +1,34 @@
 {% extends "layout.html" %}
 
+{% block title%}
+Guardar Registro
+{% endblock %}
+
 {% block content %}
 
 <div class="container">
-    <div class="row">
-        <h1>Agregar Direccion</h1>
-        <form method="POST">
-            {{forma.csrf_token}}
-            <p>
-                {{forma.nombre.label}} <br>
-                {{forma.nombre(size=30)}}
-            </p>
-            <p>
-                {{forma.direccion.label}} <br>
-                {{forma.direccion(size=30)}}
-            </p>
-            <p>
-                {{forma.enviar()}}
-            </p>
-        </form>
+    <div class="container" style="width: 70%; padding: 100px;">
+        <div class="card-header">
+            <h3>Agregar Direccion</h3>
+        </div>
+        <div class="container">
+            <div class="container" style="width: 70%; padding: 30px;">
+                <form method="POST">
+                    {{forma.csrf_token}}
+                    <p>
+                        {{forma.nombre.label}} <br>
+                        {{forma.nombre(size=30)}}
+                    </p>
+                    <p>
+                        {{forma.direccion.label}} <br>
+                        {{forma.direccion(size=30)}}
+                    </p>
+                    <p>
+                        {{forma.enviar()}}
+                    </p>
+                </form>
+            </div>
+        </div>
     </div>
 </div>
 

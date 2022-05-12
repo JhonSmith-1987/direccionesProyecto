@@ -68,7 +68,7 @@ def buscar():
     for direccion in direcciones:
         app.logger.debug(f'Se econtro esta coincidencia {direccion}')
     app.logger.debug(f'los datos filtrados por direccion son: {direcciones}')
-    return render_template('nueva_direccion.html')
+    return render_template('nueva_direccion.html', direcciones=direcciones)
 
 
 @app.route('/editar/<int:id>', methods=['GET', 'POST'])

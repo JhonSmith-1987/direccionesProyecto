@@ -1,9 +1,27 @@
 {% extends "layout.html" %}
 
+{% block title%}
+Resultado Busqueda
+{% endblock %}
+
 {% block content %}
-<div>
-    <h1>Su busqueda es</h1>
-    <h2></h2>
+
+<div class="container">
+    <div class="container" style="width: 70%; padding: 100px;">
+        <div class="card-header">
+            <h3>Su busqueda es:</h3>
+        </div>
+        <ul class="list-group list-group-flush">
+            <table class="table">
+            {% for direccion in direcciones %}
+                <tr>
+                    <td>{{direccion.nombre}}</td>
+                    <td>{{direccion.direccion}}</td>
+                </tr>
+            {% endfor %}
+            </table>
+        </ul>
+    </div>
 </div>
 
 {% endblock %}
