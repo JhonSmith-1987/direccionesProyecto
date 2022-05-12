@@ -1,0 +1,67 @@
+/* button styles */
+.ver{
+    text-decoration: none;
+    background: rgba(154, 154, 236, 0.799);
+    color: whitesmoke;
+    padding: 3px;
+    border-radius: 5px;
+}
+.verde{
+    text-decoration: none;
+    background: rgba(150, 234, 157, 0.799);
+    color: whitesmoke;
+    padding: 3px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+
+.rojo{
+    text-decoration: none;
+    background: rgba(237, 133, 95, 0.799);
+    color: whitesmoke;
+    padding: 3px;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+.ver:hover{
+    background: rgba(184, 181, 181, 0.904);
+    color: rgba(103, 103, 216, 0.799);
+}
+.verde:hover{
+    background: rgba(194, 199, 194, 0.904);
+    color: rgba(255, 255, 255, 0.799);
+}
+.rojo:hover{
+    background: rgba(194, 199, 194, 0.904);
+    color: rgba(241, 101, 50, 0.799);
+}
+
+/*add address styles*/
+h3{
+    text-align: center;
+}
+input{
+    border: none;
+    outline: none;
+    background: rgba(226, 229, 226, 0.904);
+    color: rgb(41, 41, 44);
+    border-bottom: 1px solid rgba(142, 181, 142, 0.904);
+    border-radius: 5px;
+}
+.button_enviar{
+    text-align: center;
+}
+#enviar{
+    background: rgba(142, 181, 142, 0.904);
+    color: rgba(226, 229, 226, 0.904);
+}
+
+/* error style */
+
+.mensaje_error{
+    text-align: center;
+    padding: 50px;
+    color: rgb(177, 105, 165);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
