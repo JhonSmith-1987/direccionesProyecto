@@ -8,8 +8,8 @@ from forms import DireccionForm
 app = Flask(__name__)
 
 # configuracion de la base de datos
-USER_DB = 'gabosoft'
-PASS_DB = 'gabosoft1234!'
+USER_DB = 'postgres'
+PASS_DB = 'admin'
 URL_DB = 'localhost'
 NAME_DB = 'mis_direcciones'
 
