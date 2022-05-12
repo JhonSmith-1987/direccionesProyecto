@@ -1,8 +1,6 @@
 from flask import Flask, render_template, request, url_for
 from flask_migrate import Migrate
 from werkzeug.utils import redirect
-
-#from buscar import BuscarForm
 from database import db
 import models
 from forms import DireccionForm
