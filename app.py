@@ -62,8 +62,8 @@ def agregar():
 
 @app.route('/buscar', methods=['GET', 'POST'])
 def buscar():
-    nombre = request.form['nombre']
-    app.logger.debug("Se detecto el nombre => {}".format(nombre))
+    formulario = request.form.to_dict()
+    app.logger.debug("Se detecto el nombre => {}".format(formulario))
     # dato = models.Direccion.nombre
     # app.logger.debug(f'el dato es: {dato}')
     return render_template('nueva_direccion.html')
